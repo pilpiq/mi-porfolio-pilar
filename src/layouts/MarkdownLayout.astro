@@ -1,0 +1,16 @@
+---
+import '../styles/estilo.css';
+const {frontmatter} = Astro.props;
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <main class="markdown container">
+        <slot />
+        </main>
+    </body>
+</html>

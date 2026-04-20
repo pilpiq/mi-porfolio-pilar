@@ -1,0 +1,45 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+
+ const projects = [
+{
+    title: "Tema personalizado Wordpress",
+    description: "Tema diseñado desde 0 con tienda Woocommerce y un CPT",
+    link: "#"
+},
+
+{   
+    title: "Portfolio Astro",
+    description: "Creación desde 0 de un portfolio mediante Astro",
+    link: "#"
+},
+
+{
+    title: "Pagina con productos de tienda",
+    description: "Pagina con informacion sobre tienda y boton de cargar mas",
+    link: "#"
+}
+
+];
+
+---
+
+<MainLayout title="Proyectos">
+    <Header />
+    <main class="container">
+        <h1>Mis proyectos</h1>
+        {projects.map (project => (
+        <div class="card">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <a href={project.link}>Ver proeycto</a>    
+        </div>
+        ))}
+
+    </main>
+
+    <Footer />
+</MainLayout>

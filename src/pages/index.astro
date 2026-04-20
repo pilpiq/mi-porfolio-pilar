@@ -1,17 +1,18 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/estilo.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Inicio">
+	<Header />
+	<h1 class="portada">Pilar, estudiante de desarrollo web</h1>
+	<p class="introduccion">Aunque desde que vi un ordenador por primera vez y sentía curiosidad por
+		como se manejaba y todas las soluciones  que aportaban, hasta ahora no me he atrevido a dar el
+		paso para convertirme en profesional de esta disciplina.
+		La experiencia  profesional que tengo en otros sectores me sirve
+		para enfocar las soluciones que se necesitan ante problemas digitales desde otras perspectivas.
+	</p>
+	<Footer />
+</MainLayout>

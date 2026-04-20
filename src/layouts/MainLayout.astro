@@ -1,0 +1,13 @@
+---
+import '../styles/estilo.css';
+const {title} = Astro.props;
+---
+<hmtl lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</hmtl>
